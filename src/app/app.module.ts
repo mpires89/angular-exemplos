@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '../../node_modules/@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -11,8 +13,9 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   imports: [
     RouterModule, 
-    BrowserModule, 
-
+    BrowserModule,
+    HttpClientModule,
+    
     AppRoutingModule
   ],
   providers: [],

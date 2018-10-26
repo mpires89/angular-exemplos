@@ -1,0 +1,27 @@
+<fieldset>
+    <div style="text-align:center">
+        
+        <h2>Tabela Pessas</h2>
+        
+        <table>
+            <tr>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Email</th>
+                <th>Endereco(cep)</th>
+                <th colspan="2">Açoes</th>
+            </tr>
+            <tr *ngFor="let p of pessoas">
+                <td>{{p.nome}}</td>
+                <td>{{p.cpf}}</td>
+                <td>{{p.email}}</td>
+                <td>{{p.endereco.cep}}</td>
+                <td><button>Excluir</button></td>
+                <td><button>Alterar</button></td>
+            </tr>
+        </table>
+        
+        
+        
+    </div>
+</fieldset>
