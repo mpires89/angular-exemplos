@@ -15,9 +15,9 @@
                 <td>{{p.nome}}</td>
                 <td>{{p.cpf}}</td>
                 <td>{{p.email}}</td>
-                <td>{{p.endereco.cep}}</td>
-                <td><button>Excluir</button></td>
-                <td><button>Alterar</button></td>
+                <td>{{p.enderecoDto.cep}}</td>
+                <td><button (click)="excluir(p.cpf)">Excluir</button></td>
+                <td><button (click)="alterar(p.cpf)">Alterar</button></td>
             </tr>
         </table>
         

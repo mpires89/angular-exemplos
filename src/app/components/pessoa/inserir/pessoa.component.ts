@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Endereco } from '../../models/endereco';
+import { PessoaModule } from '../../models/pessoa.modulo';
+import { PessoaService } from '../../server/pessoa.service';
 
 @Component({
   selector: 'app-pessoa',
@@ -8,15 +10,19 @@ import { Endereco } from '../../models/endereco';
 })
 export class PessoaComponent implements OnInit {
   public endereco: Endereco
+  public pessoa: PessoaModule
 
-  constructor() { }
+  constructor(private service: PessoaService) { }
   
   ngOnInit() {
-    this.endereco = new Endereco();
+    this.pessoa = new PessoaModule();
   }
   
   salvar(){
-    let logadouro = this.endereco.logradouro
-    console.log(logadouro);
+    this.service.postBanco(this.pessoa).subscribe(p => this.pessoa = p);
+    this.pessoa = new PessoaModule();
+
+
+
   }
 }

@@ -4,5 +4,6 @@ export class PessoaModule{
     nome: string;
     cpf: string;
     email: string;
-    endereco: Endereco;
+    enderecoDto: Endereco = new Endereco();
+
 }

@@ -4,7 +4,9 @@ import { HttpClient } from '@angular/common/http';
 import { PessoaModule } from '../models/pessoa.modulo';
 
 
-const URL_BUSCAR_PESSOAS: string = 'http://10.11.21.162:8080/pessoa';
+const URL_BUSCAR_PESSOAS: string = 'http://localhost:8080/pessoa/buscarTodos';
+const URL_SALVAR_PESSOA: string = 'http://localhost:8080/pessoa/inserir';
+const URL_EXCLUIR_PESSOA: string = 'http://localhost:8080/pessoa/excluir/';
 
 
 @Injectable({
@@ -18,6 +20,16 @@ export class PessoaService {
   getPessoas(): Observable<PessoaModule[]>{
     return this.http.get<PessoaModule[]>(URL_BUSCAR_PESSOAS);
   }
+
+  postBanco(pessoa:PessoaModule): Observable<PessoaModule>{
+    return this.http.post<PessoaModule>(URL_SALVAR_PESSOA,pessoa )  
+  }
+
+  excluirPessoa(cpf: string):Observable<void>{
+    return this.http.delete<void>(URL_EXCLUIR_PESSOA+cpf)
+  }
+  
+
 
   
 

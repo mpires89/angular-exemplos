@@ -1,23 +1,23 @@
 <h3>Cadastro </h3>
   <fieldset>
   <div>
-    Nome: <input type="text"/><br>
-    CPF: <input type="text"/><br>
-    email: <input type="text"/><br>
-    CEP<input type="text"/><br>
+    Nome: <input type="text"[(ngModel)]="pessoa.nome"/><br>
+    CPF: <input type="text"[(ngModel)]="pessoa.cpf"/><br>
+    email: <input type="text"[(ngModel)]="pessoa.email"/><br>
+    CEP<input type="text"[(ngModel)]="pessoa.enderecoDto.cep"/><br>
   </div>
 </fieldset>
 <fieldset>
 
   <div>
-    Logadouro:<input type="text" [(ngModel)]="logadouro"/><br>
-    Numero:<input type="text"/><br>
-    Complemento:<input type="text"/><br>
-    Bairro:<input type="text"/><br>
-    Cidade:<input type="text"/><br>
-    UF:<input type="text"/><br>
+    Logadouro:<input type="text" [(ngModel)]="pessoa.enderecoDto.logradouro"/><br>
+    Numero:<input type="text"[(ngModel)]="pessoa.enderecoDto.numero"/><br>
+    Complemento:<input type="text"[(ngModel)]="pessoa.enderecoDto.complemento"/><br>
+    Bairro:<input type="text"[(ngModel)]="pessoa.enderecoDto.bairro"/><br>
+    Cidade:<input type="text"[(ngModel)]="pessoa.enderecoDto.cidade"/><br>
+    UF:<input type="text"[(ngModel)]="pessoa.enderecoDto.uf"/><br>
   </div>
-  <button (click)="salvar">Salvar</button>
+  <button (click)="salvar()">Salvar</button>
 
 </fieldset>
 
