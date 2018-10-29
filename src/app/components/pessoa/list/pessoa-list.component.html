@@ -17,7 +17,7 @@
                 <td>{{p.email}}</td>
                 <td>{{p.enderecoDto.cep}}</td>
                 <td><button (click)="excluir(p.cpf)">Excluir</button></td>
-                <td><button (click)="alterar(p.cpf)">Alterar</button></td>
+                <td><button [routerLink]="[ '/pessoa/alterar/', p.cpf ]" class="btn btn-outline-success">Alterar</button></td>
             </tr>
         </table>
         
