@@ -20,6 +20,10 @@ const routes: Routes = [
   path: 'pessoa', 
   loadChildren: '../app/components/pessoa/pessoa.module#PessoaModule'
 }, 
+  {
+  path: 'livro', 
+  loadChildren: '../app/components/livro/livro.module#LivroModule'
+}, 
 ];
 
 @NgModule({

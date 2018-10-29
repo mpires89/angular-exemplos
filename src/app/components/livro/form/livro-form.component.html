@@ -1,0 +1,21 @@
+  <fieldset>
+      <legend>Cadastro</legend>
+      <div>
+        Titulo: <input type="text"[(ngModel)]="livro.titulo"/><br>
+        Data de Publicação: <input type="text"[(ngModel)]="livro.data"/><br>
+        
+        <div>
+          Autor: <select [(ngModel)]="livro.autores">
+            <option>Selecione..</option>
+          </select>
+        </div>
+        <div>
+          Categoria<select [(ngModel)]="categorias">
+            <option>Selecione...</option>
+          </select>
+        </div>        
+        <button (click)="salvar()"> Salvar</button>
+      </div>
+</fieldset>
+
+

@@ -28,7 +28,7 @@ export class PessoaComponent implements OnInit {
   }
   
 
-  cadastrar(): void{
+  salvar(): void{
     if(this.pessoa.cpf){
       this.service.alterarPessoa(this.pessoa)
       .subscribe(() => {this.pessoa = new PessoaModule()
