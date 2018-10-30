@@ -5,7 +5,8 @@ import { LivroListaComponent } from './lista/livro-lista.component';
 
 const routes: Routes = [
   { path: '', component: LivroFormComponent }, 
-  { path: 'listar', component: LivroListaComponent }, 
+  { path: 'listar', component: LivroListaComponent },
+  { path: 'listar/:id', component: LivroFormComponent  }
 ];
 
 @NgModule({

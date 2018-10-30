@@ -4,21 +4,25 @@
         <h2>Tabela de Livros</h2>
         
         <table>
-            <tr>
-                <th> Titulo </th>
-                <th> Data </th>
-                <th> Autor </th>
-                <th> Categoria </th>
-                <th colspan="2"> Açoes </th>
-            </tr>
-            <!--tr *ngFor="let l of livros">
-                <td>{{l.titulo}}</td>
-                <td>{{l.data}</td>
-                <td>{{l.autor.nome}}</td>
-                <td>{{l.categoria.descricao}}</td>
-                <td><button (click)="excluir(p.cpf)">Excluir</button></td>
-                <td><button [routerLink]="[ '/pessoa/alterar/', p.cpf ]" class="btn btn-outline-success">Alterar</button></td>
-            </tr-->
+                <thead>
+                    <tr>
+                        <th> Titulo </th>
+                        <th> Data </th>
+                        <th> Autor </th>
+                        <th> Categoria </th>
+                        <th colspan="2"> Açoes </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let l of livros">
+                        <td>{{l.titulo}}</td>
+                        <td>{{l.data}</td>
+                        <td>{{l.autor.nome}}</td>
+                        <td>{{l.categoria.descricao}}</td>
+                        <td><button (click)="excluir(l.id)">Excluir</button></td>
+                        <td><button [routerLink]="['/livro/listar', l.id]"class="btn btn-outline-success">Alterar</button></td>
+                    </tr>
+                </tbody>
         </table>
         
         
